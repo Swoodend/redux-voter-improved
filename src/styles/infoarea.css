@@ -1,0 +1,38 @@
+.info-container {
+    width: 100%;
+    background: #f9f8f9;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.app-img {
+    height: 90px;
+    width: 90px;
+}
+
+.wide {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.images-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.framework-logo {
+    height: 150px;
+    width: 150px;
+    padding: 0 25px;
+    cursor: pointer;
+}
