@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import InfoArea from './InfoArea';
 import '../styles/app.css';
-import testImg from '../../public/small.gif';
 
 function testDecorator(target){
     target.working = true;
@@ -10,12 +10,9 @@ function testDecorator(target){
 export default class App extends Component {
     render(){
         return (
-            <div>
-                <h1>Hello World</h1>
-                <img src={testImg}></img>
+            <div className="app">
+                <InfoArea />
             </div>
         );
     }
 }
-
-console.log('decorating working is', App.working);
