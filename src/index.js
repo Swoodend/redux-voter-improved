@@ -4,8 +4,10 @@ import App from './components/App';
 import { votesReducer } from './reducers/votesReducer';
 import { currentPercentageReducer } from './reducers/currentPercentageReducer';
 import { pastPercentageReducer } from './reducers/pastPercentageReducer';
-import { combineReducers, createStore} from 'redux';
+import { combineReducers, createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
+import { createLogger } from 'redux-logger'
 
 const combinedReducers = combineReducers({
     "votes": votesReducer,
@@ -13,8 +15,8 @@ const combinedReducers = combineReducers({
     "pastPercentages": pastPercentageReducer
 });
 
-let store = createStore(combinedReducers);
-
+const logger = createLogger();
+let store = createStore(combinedReducers, applyMiddleware(logger, thunk));
 
 ReactDOM.render(
     <Provider store={store}>
@@ -22,3 +24,4 @@ ReactDOM.render(
     </Provider>, 
     document.getElementById('root')
 );
+
