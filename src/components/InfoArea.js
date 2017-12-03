@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { voteAction } from '../actions/voteAction';
+import { castVote } from '../actions/voteAction';
 import '../styles/infoarea.css';
 
 
-@connect((state) => {
+@connect(state => {
     return {
         votes: {
             angular: state.votes.angular,
@@ -29,18 +29,18 @@ export default class InfoArea extends Component {
         this.votedAngular = this.votedAngular.bind(this);
         this.votedReact = this.votedReact.bind(this);
         this.votedVue = this.votedVue.bind(this);
-    }
+    }   
 
     votedAngular(){
-        console.log('voted angular');
+        this.props.dispatch(castVote('angular'));
     }
 
     votedReact(){
-        console.log('voted react');
+        this.props.dispatch(castVote('react'));        
     }
 
     votedVue(){
-        console.log('voted vue');
+        this.props.dispatch(castVote('vue'));
     }
 
     render(){
