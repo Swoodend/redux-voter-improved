@@ -5,5 +5,16 @@ const initialPastPercentages = {
 };
 
 export function pastPercentageReducer(state=initialPastPercentages, action){
-    return state;
+    switch (action.type){
+        case "UPDATE_PAST_PERCENTAGES":
+            let { angular, react, vue } = action.payload;
+            return Object.assign({}, state, {
+                angular,
+                react,
+                vue
+            })
+        default:
+            return state;
+
+    }
 }
