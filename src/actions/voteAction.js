@@ -20,7 +20,6 @@ export const updatePastPercentages = (voteState) => {
 }
 
 export const castVote = (framework) => (dispatch, getState) => {
-    dispatch(updatePastPercentages(getState().currentPercentages));
     dispatch(voteAction(framework));
     dispatch(updateCurrentPercentages(getState().votes));    
 }
