@@ -1,18 +1,18 @@
-const voteAction = (framework) => {
+export const voteAction = (framework) => {
     return {
         type: "VOTE",
         payload: framework
     }
 }
 
-const updateCurrentPercentages = (voteState) => {
+export const updateCurrentPercentages = (voteState) => {
     return {
         type: "UPDATE_CURRENT_PERCENTAGES",
         payload: voteState
     }
 }
 
-const updatePastPercentages = (voteState) => {
+export const updatePastPercentages = (voteState) => {
     return {
         type: "UPDATE_PAST_PERCENTAGES",
         payload: voteState
