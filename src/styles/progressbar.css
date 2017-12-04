@@ -1,0 +1,30 @@
+.progress-bar {
+    width: 90%;
+    height: 25px;
+    border: 1px solid black;
+    position: relative;
+}
+
+.progress-bar-tag {
+    position: absolute;
+    bottom: 26px;
+    min-width: 65px;
+    height: 25px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 12px;
+    color: white;
+}
+
+.filler {
+    height: 100%;
+    position: absolute;
+    top: 0px;
+}
+
+#percentage-readout{
+    text-align: center;
+    line-height: 26px;
+    position: relative;
+    z-index: 1;
+}
