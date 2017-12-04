@@ -15,11 +15,6 @@ import '../styles/infoarea.css';
             angular: state.currentPercentages.angular,
             react: state.currentPercentages.react,
             vue: state.currentPercentages.vue
-        },
-        pastPercent: {
-            angular: state.pastPercentages.angular,
-            react: state.pastPercentages.react,
-            vue: state.pastPercentages.vue
         }
     }
 })
