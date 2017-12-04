@@ -6,15 +6,14 @@ import '../styles/resultsarea.css';
 
 @connect((state) => {
     return {
-        currentPercentages: state.currentPercentages,
-        pastPercentages: state.pastPercentages
+        currentPercentages: state.currentPercentages
     }
 })
 export default class ResultsArea extends Component {
     render(){
        return (
            <div className='chart-area-container'>
-            <Motion defaultStyle={{width: this.props.pastPercentages.angular}} style={{width: spring(this.props.currentPercentages.angular)}}>
+            <Motion  style={{width: spring(this.props.currentPercentages.angular)}}>
                 { springyWidth => {
                     return (<ProgressBar
                         framework={"Angular"}
@@ -25,7 +24,7 @@ export default class ResultsArea extends Component {
                 )}}
 
             </Motion>
-            <Motion defaultStyle={{width: this.props.pastPercentages.react}} style={{width: spring(this.props.currentPercentages.react)}}>
+            <Motion style={{width: spring(this.props.currentPercentages.react)}}>
                 { springyWidth => {
                     return (
                     <ProgressBar
@@ -37,7 +36,7 @@ export default class ResultsArea extends Component {
                     
                 )}}
             </Motion>
-            <Motion defaultStyle={{width: this.props.pastPercentages.vue}} style={{width: spring(this.props.currentPercentages.vue)}}>
+            <Motion style={{width: spring(this.props.currentPercentages.vue)}}>
                 { springyWidth => {
                     return (
                     <ProgressBar
